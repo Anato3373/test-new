@@ -5,18 +5,23 @@
       :pers='pers'
     />
     </div>
+    <Pagination />
   </div>
 </template>
 
 <script>
 import GalleryPerson from "@/components/GalleryPerson";
+import Pagination from "@/components/Pagination";
 import { mapGetters, mapActions } from "vuex";
 
 export default {
   name: "AllPerson",
-  components: {GalleryPerson},
+  components: {GalleryPerson, Pagination},
   computed:{
-    ...mapGetters(['arrGallery'])
+    ...mapGetters(['arrGallery']),
+    rows() {
+      return this.arrGallery.length
+    }
   },
   methods: {
     ...mapActions(['getGallery'])
@@ -51,7 +56,9 @@ export default {
 }
 
 @media screen and (min-width: 1000px) {
-
+    .all_person{
+        padding: 0 160px;
+    }
 }
 
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="gallery_person person">
+  <div class="gallery_person person ">
     <div class="person_acc">
       <img class="person_acc_img" :src="pers.user.profile_image.small" alt="">
       <div>
@@ -16,14 +16,10 @@
 </template>
 
 <script>
-// import {mapGetters} from vuex
 
 export default {
   name: "GalleryPerson",
   props: ['pers'],
-  // computed: {
-  //   ...mapGetters['']
-  // }
 }
 </script>
 
@@ -31,10 +27,10 @@ export default {
 
 .gallery_person {
   width: 100%;
-  // height: 400px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  align-self: flex-start;
 }
 
 .person_acc {
@@ -48,6 +44,7 @@ export default {
     margin: 0 10px 0 0;
   }
   div {
+    height: 42px;
     display: block;
   }
   &_name {
@@ -59,6 +56,7 @@ export default {
   }
   &_social {
     font-size: 12px;
+    line-height: 16px;
     color: #8D8D8D;
   }
 }
