@@ -9,7 +9,7 @@ export default new Vuex.Store({
   state: {
     gallery: [],
     accesKey: 'q7LHQiyZge3nPA6GkLWpYkPiYOUTEmUZgEAagNLkOlA',
-    API: 'https://api.unsplash.com/photos?per_page=60&'
+    API: 'https://api.unsplash.com/photos?per_page=30&'
   },
   mutations: {
     CREATE(state, arr){

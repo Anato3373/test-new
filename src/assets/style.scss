@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Roboto+Condensed:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap');
+@import url('bootstrap/dist/css/bootstrap.css');
+@import url('bootstrap-vue/dist/bootstrap-vue.css');
+
+$bgc: #000000 !important;
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.pagination {
+    justify-content: center;
+    margin: 0;
+    padding: 8px 0 0 0;
+    align-items: baseline;
+    height: 60px;
+    background: $bgc;
+    opacity: 0.9;
+    position: sticky;
+    bottom: 0;
+    outline: none;
+    border: none;
+  }
+
+  .page-item  {
+    background: $bgc;
+    opacity: 0.9;
+    &:first-of-type, &:last-of-type {
+        display: none;
+    }
+    .page-link {
+        background: $bgc;
+        opacity: 0.9;
+        background: $bgc;
+        font-size: 14px;
+        color: #FFFFFF;
+        border: none;
+        &:focus {
+            box-shadow: none !important;
+        }
+    }
+    &.disabled .page-link {
+        background: $bgc;
+    }
+    &.active .page-link {
+        background: $bgc;
+        border-color: $bgc;
+        font-size: 20px;
+        font-weight: bold;
+    }
+  }
+  .bv-no-focus-ring:focus {
+    outline: none;
+  }
+  
+  @media (max-width: 575.98px) {
+    .bv-d-xs-down-none {
+      display: block !important;
+    }
+  }
+  @media (max-width: 767.98px) {
+    .bv-d-sm-down-none {
+      display: block !important;
+    }
+  }
+  @media (max-width: 991.98px) {
+    .bv-d-md-down-none {
+      display: block !important;
+    }
+  }
+  @media (max-width: 1199.98px) {
+    .bv-d-lg-down-none {
+      display: block !important;
+    }
+  }
+  .bv-d-xl-down-none {
+    display: block !important;
+  }
