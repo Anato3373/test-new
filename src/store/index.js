@@ -13,7 +13,7 @@ export default new Vuex.Store({
   },
   mutations: {
     CREATE(state, arr){
-      state.gallery.push(...arr)
+      state.gallery = [...arr]
     }
   },
   actions: {

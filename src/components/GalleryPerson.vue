@@ -49,6 +49,7 @@ export default {
   }
   &_name {
     display: block;
+    text-decoration: none;
     width: 100%;
     font-weight: bold;
     font-size: 12px;
