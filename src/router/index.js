@@ -15,9 +15,9 @@ const routes = [
     path: '/info',
     name: 'PersonInfo',
     component: PersonInfo,
-    childrens: {
-      id: 'id'
-    }
+    children: [
+      { path: ":id", component: PersonInfo},
+    ],
   }
 ]
 

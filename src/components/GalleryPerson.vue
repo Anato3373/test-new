@@ -1,15 +1,15 @@
 <template>
   <div class="gallery_person person ">
     <div class="person_acc">
-      <img class="person_acc_img" :src="pers.user.profile_image.small" alt="">
+      <img class="person_acc_img" :src="person.user.profile_image.small" alt="">
       <div>
-        <span class="person_acc_name">{{ pers.user.name }}</span>
-        <span class="person_acc_social">{{ pers.user.social.instagram_username }}</span>
+        <router-link :to="'/info/' + person.id" class="person_acc_name">{{ person.user.name }}</router-link>
+        <span class="person_acc_social">{{ person.user.social.instagram_username }}</span>
       </div>
     </div>
-    <img class="person_image" :src="pers.urls.small" alt="">
+    <img class="person_image" :src="person.urls.small" alt="">
     <div class="person_views">
-      <span class="person_views_quantity">{{ pers.likes }}</span>
+      <span class="person_views_quantity">{{ person.likes }}</span>
       <span class="person_views_icon"><img src="../assets/Eye.png" alt="eye"></span>
     </div>
   </div>
@@ -19,7 +19,7 @@
 
 export default {
   name: "GalleryPerson",
-  props: ['pers'],
+  props: ['person'],
 }
 </script>
 

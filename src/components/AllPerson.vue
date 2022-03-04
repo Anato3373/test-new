@@ -1,8 +1,8 @@
 <template>
   <div class="block">
     <div class="all_person">
-      <div v-for="pers in lists" :key="pers.id">
-        <GalleryPerson :pers="pers" />
+      <div v-for="person in lists" :key="person.id">
+        <GalleryPerson :person="person" />
       </div>
     </div>
     <b-pagination
@@ -54,15 +54,16 @@ export default {
 .all_person {
   background-color: #fff;
 }
+.all_person {
+  background-color: #fff;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 20px;
+}
 
 @media screen and (min-width: 480px) {
-  .all_person {
-    background-color: #fff;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 20px;
-  }
 }
 
 @media screen and (min-width: 768px) {

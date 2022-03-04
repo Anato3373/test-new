@@ -27,7 +27,14 @@ export default new Vuex.Store({
   getters: {
     arrGallery(state){
       return state.gallery
-    }
+    },
+    infoPerson: (state) => (id) => {
+      return state.gallery.find(el => {
+        if (el.id === id) {
+          return el
+        }
+      })
+    },
   },
 
   modules: {
